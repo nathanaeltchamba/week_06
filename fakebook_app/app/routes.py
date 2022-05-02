@@ -1,9 +1,11 @@
 from app import app 
+from flask import render_template
+
 
 # MAIN APPLICATION ROUTES
 @app.route('/')
 def home():
-    return 'Home Page'
+    return render_template('main/home.html')
 
 @app.route('/contact')
 def contact():
